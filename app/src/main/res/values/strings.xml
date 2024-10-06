@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">app-tp</string>
+    <string name="inversor_digital">Inversor Digital</string>
+    <string name="monto">Monto:</string>
+    <string name="tasa">Tasa:</string>
+    <string name="entidad">Entidad:</string>
+    <string name="plazo">Plazo:</string>
+    <string name="tipo">Tipo:</string>
+    <string name="inversion_1">Inversion 1</string>
+    <string name="inversion_2">inversion 2</string>
+    <string name="analisis_de_inversiones">analisis de inversiones</string>
+    <string name="politicas_de_uso">politicas de uso</string>
+    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="resultado_de_analisis">resultado de analisis</string>
+    <string name="el_resultado_de_la_inversion_numero_1">El resultado de la inversion numero 1:</string>
+    <string name="el_resultado_de_la_inversion_numero_2">El resultado de la inversion numero 2:</string>
+    <string name="_30_30">30,30</string>
+    <string name="historial_de_analisis">historial de analisis</string>
+    <string name="boton1">boton1</string>
+</resources>
