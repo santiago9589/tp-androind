@@ -7,6 +7,8 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken
+import com.google.gson.Gson
 
 
 class HomeActivity : AppCompatActivity() {
@@ -91,6 +93,11 @@ class HomeActivity : AppCompatActivity() {
             var capitalFinal2:Float = inputMonto2Parsed + (gananciaPlazo2 * plazoMensual2)
             var ROIinversion2:Float = ((capitalFinal2-inputMonto2Parsed)/inputMonto2Parsed)
 
+            // guardo las inversiones
+            var inversionesClass = Inversiones(ROIinversion1.toString(),ROIinversion2.toString())
+            agregarElemento(inversionesClass)
+
+            // guardarInversiones(ROIinversion1.toString(),ROIinversion2.toString())
 
             // lanzo el intent a la pagina de resultado
 
@@ -102,4 +109,41 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    public fun cargarLista(): MutableList<Inversiones> {
+        val sharedPreferences = getSharedPreferences("MiLista", MODE_PRIVATE)
+        val gson = Gson()
+        val json = sharedPreferences.getString("LISTA", null)
+
+        val type = object : TypeToken<MutableList<Inversiones>>() {}.type
+        return if (json != null) {
+            gson.fromJson(json, type)
+        } else {
+            mutableListOf() // Devuelve una lista vacía si no hay datos
+        }
+    }
+
+    public fun agregarElemento(Inversiones: Inversiones) {
+        // Cargar la lista existente
+        val lista = cargarLista()
+
+        // Agregar el nuevo elemento
+        lista.add(Inversiones)
+
+        // Guardar la lista actualizada
+        guardarLista(lista)
+    }
+
+    public fun guardarLista(lista: List<Inversiones>) {
+        val sharedPreferences = getSharedPreferences("MiLista", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        val gson = Gson()
+        val json = gson.toJson(lista)
+
+        editor.putString("LISTA", json)
+        editor.apply()
+    }
+
+
 }

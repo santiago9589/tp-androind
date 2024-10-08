@@ -11,7 +11,7 @@
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:background="@color/purple_200"
+      android:background="@color/verde_oscuro"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintLeft_toLeftOf="parent"
       android:orientation="vertical"
@@ -23,7 +23,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -45,13 +44,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:background="@color/teal_200"
+
         android:orientation="vertical"
         >
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="30dp"
-          android:background="@color/white"
+
           app:layout_constraintTop_toTopOf="parent"
           app:layout_constraintLeft_toLeftOf="parent"
           app:layout_constraintRight_toRightOf="parent"
@@ -83,7 +82,7 @@
           app:layout_constraintLeft_toLeftOf="parent"
           android:orientation="horizontal"
           android:gravity="center"
-          android:background="@color/teal_700">
+          >
         <TextView
             android:id="@+id/text_view_monto_1"
             android:layout_width="80dp"
@@ -110,7 +109,7 @@
           app:layout_constraintLeft_toLeftOf="parent"
           android:orientation="horizontal"
           android:gravity="center"
-          android:background="@color/teal_700">
+          >
         <TextView
             android:id="@+id/text_view_tasa_1"
             android:layout_width="80dp"
@@ -137,7 +136,7 @@
           app:layout_constraintLeft_toLeftOf="parent"
           android:orientation="horizontal"
           android:gravity="center"
-          android:background="@color/teal_700">
+          >
         <TextView
             android:id="@+id/text_view_plazo_1"
             android:layout_width="80dp"
@@ -164,7 +163,7 @@
           app:layout_constraintLeft_toLeftOf="parent"
           android:orientation="horizontal"
           android:gravity="center"
-          android:background="@color/teal_700">
+          >
         <TextView
             android:id="@+id/text_view_entidad_1"
             android:layout_width="80dp"
@@ -191,7 +190,7 @@
           app:layout_constraintLeft_toLeftOf="parent"
           android:orientation="horizontal"
           android:gravity="center"
-          android:background="@color/teal_700">
+          >
         <TextView
             android:id="@+id/text_view_tipo_1"
             android:layout_width="80dp"
@@ -224,7 +223,7 @@
           app:layout_constraintLeft_toLeftOf="parent"
           android:orientation="horizontal"
           android:gravity="center"
-          android:background="@color/teal_700">
+          >
         <TextView
             android:id="@+id/text_view_monto_2"
             android:layout_width="80dp"
@@ -251,7 +250,7 @@
           app:layout_constraintLeft_toLeftOf="parent"
           android:orientation="horizontal"
           android:gravity="center"
-          android:background="@color/teal_700">
+          >
         <TextView
             android:id="@+id/text_view_tasa_2"
             android:layout_width="80dp"
@@ -278,7 +277,7 @@
           app:layout_constraintLeft_toLeftOf="parent"
           android:orientation="horizontal"
           android:gravity="center"
-          android:background="@color/teal_700">
+          >
         <TextView
             android:id="@+id/text_view_plazo_2"
             android:layout_width="80dp"
@@ -305,7 +304,7 @@
           app:layout_constraintLeft_toLeftOf="parent"
           android:orientation="horizontal"
           android:gravity="center"
-          android:background="@color/teal_700">
+          >
         <TextView
             android:id="@+id/text_view_entidad_2"
             android:layout_width="80dp"
@@ -332,7 +331,7 @@
           app:layout_constraintLeft_toLeftOf="parent"
           android:orientation="horizontal"
           android:gravity="center"
-          android:background="@color/teal_700">
+          >
         <TextView
             android:id="@+id/text_view_tipo_2"
             android:layout_width="80dp"
@@ -351,22 +350,25 @@
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:background="@color/teal_700"
+
           app:layout_constraintRight_toRightOf="parent"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintTop_toTopOf="parent"
           app:layout_constraintLeft_toLeftOf="parent"
-          android:gravity="center">
+          android:gravity="center"
+          >
         <androidx.appcompat.widget.AppCompatButton
           android:id="@+id/calcular_btn"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="calcular"/>
+          android:text="calcular"
+            tools:ignore="HardcodedText" />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/historial_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="historial"/>
+            android:text="historial"
+            />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/terminos_btn"
             android:layout_width="wrap_content"
